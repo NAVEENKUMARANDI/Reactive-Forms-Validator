@@ -1,0 +1,16 @@
+<form [formGroup]="validatorForm" (ngSubmit)="onSubmit()">
+    
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" id="firstName">
+    </label>
+
+<div class="invalid-feedback" *ngIf="name.errors?.age">
+    <sup>*</sup>Age should not be more than 18 years
+  </div>
+
+  <button type="submit" [disabled]="!validatorForm.valid">Submit</button>
+
+  </form>
+
+  <router-outlet></router-outlet>
